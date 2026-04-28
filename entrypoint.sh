@@ -6,4 +6,4 @@ chown -R mssql:root /.system /log /var/opt/mssql
 chmod -R 775 /.system /log /var/opt/mssql
 
 # Start SQL Server as mssql user
-exec gosu mssql /opt/mssql/bin/sqlservr
+exec su -s /bin/bash mssql -c "/opt/mssql/bin/sqlservr"
